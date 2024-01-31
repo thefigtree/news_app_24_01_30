@@ -1,7 +1,13 @@
+import styled from "styled-components";
+
+const SHeader = styled.header``;
+
+const HeaderTitle = styled.div``;
+
 export const Header = () => {
   return (
-    <Header>
+    <SHeader>
       <HeaderTitle>News</HeaderTitle>
-    </Header>
+    </SHeader>
   );
 };
