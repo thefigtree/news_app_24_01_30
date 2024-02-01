@@ -1,13 +1,25 @@
 import styled from "styled-components";
 
-const SHeader = styled.header``;
+const SHeader = styled.header`
+  width: 100%;
+  position: relative;
+  padding-bottom: 200px;
+  background-color: rebeccapurple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-const HeaderTitle = styled.div``;
+const Title = styled.div`
+  position: absolute;
+  bottom: 0;
+  font-size: 100px;
+`;
 
 export const Header = () => {
   return (
     <SHeader>
-      <HeaderTitle>News</HeaderTitle>
+      <Title>Top News</Title>
     </SHeader>
   );
 };

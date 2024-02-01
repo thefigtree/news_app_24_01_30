@@ -1,19 +1,32 @@
 import { useEffect, useState } from "react";
+import { Menu } from "./Menu";
+import { Header } from "./Header";
 
 export const Home = () => {
-  const [news, setNews] = useState([]);
+  const [items, setItems] = useState([]);
+  const [active, setActive] = useState(0);
+  const [category, setCategory] = useState("general");
 
   const getNews = () => {
     fetch(
-      "https://newsapi.org/v2/everything?q=Apple&sortBy=popularity&apiKey=21bafff9bef44f9e9090148dec03f4c3"
+      `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=21bafff9bef44f9e9090148dec03f4c3`
     )
       .then((res) => res.json())
-      .then((json) => setNews(json.articles));
+      .then((data) => setItems(data.articles));
   };
 
   useEffect(() => {
     getNews();
-  }, []);
+  }, [category]);
 
-  console.log(news);
+  return (
+    <div>
+      <Header></Header>
+      <Menu
+        active={active}
+        setActive={setActive}
+        setCategory={setCategory}
+      ></Menu>
+    </div>
+  );
 };
