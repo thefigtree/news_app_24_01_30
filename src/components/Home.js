@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu } from "./Menu";
 import { Header } from "./Header";
+import { ShowNews } from "../ShowNews";
 
 export const Home = () => {
   const [items, setItems] = useState([]);
@@ -27,6 +28,7 @@ export const Home = () => {
         setActive={setActive}
         setCategory={setCategory}
       ></Menu>
+      <ShowNews items={items}></ShowNews>
     </div>
   );
 };
