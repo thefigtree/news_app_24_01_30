@@ -1,6 +1,29 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const ConImage = styled.div``;
+const Container = styled.section`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`;
+
+const ConImage = styled.div`
+  width: 25em;
+  height: 15em;
+  position: relative;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+`;
 
 const Con = styled.div``;
 
@@ -20,7 +43,7 @@ export const NewsItem = ({ item }) => {
   const formatTime = formatDate.replace("Z", "");
 
   return (
-    <div>
+    <Container>
       <ConImage>
         <img src={item.urlToImage} alt={item.title}></img>
       </ConImage>
@@ -46,6 +69,11 @@ export const NewsItem = ({ item }) => {
           </small>
         </Detail>
       </Con>
-    </div>
+      {/* <Title>{item.title}</Title>
+      <ConImage>
+        <img src={item.urlToImage} alt={item.title}></img>
+      </ConImage> */}
+      {/* <Link to={`/detail/${item.url}`}></Link> */}
+    </Container>
   );
 };
