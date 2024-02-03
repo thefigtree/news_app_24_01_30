@@ -4,8 +4,6 @@ const SHeader = styled.header`
   width: 100%;
   position: relative;
   padding-bottom: 200px;
-  border-top: 2px solid black;
-  /* background-color: black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +12,7 @@ const SHeader = styled.header`
 const Title = styled.div`
   position: absolute;
   bottom: 0;
-  font-size: 100px;
+  font-size: 150px;
   color: black;
   font-weight: 900;
 `;
