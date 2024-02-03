@@ -4,12 +4,14 @@ const Navi = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
   li {
     display: inline-block;
     margin: 1em;
     font-size: 1.2em;
     padding: 0.5em 1em;
     background-color: #eee;
+    color: black;
     border-radius: 3em;
     cursor: pointer;
   }
