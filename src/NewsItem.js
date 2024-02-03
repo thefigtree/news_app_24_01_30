@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.section`
@@ -50,10 +50,6 @@ export const NewsItem = ({ item }) => {
 
       <Con>
         <Source>
-          <img
-            src={`http://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${website}&size=16`}
-            alt={item.source.id}
-          ></img>
           <span>{item.source.name}</span>
         </Source>
         <Title>
