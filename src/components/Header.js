@@ -7,6 +7,7 @@ const SHeader = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rebeccapurple;
 `;
 
 const Title = styled.div`
@@ -15,12 +16,13 @@ const Title = styled.div`
   font-size: 150px;
   color: black;
   font-weight: 900;
+  background-color: aqua;
 `;
 
 export const Header = () => {
   return (
     <SHeader>
-      <Title>Top News</Title>
+      <Title>News Today</Title>
     </SHeader>
   );
 };
