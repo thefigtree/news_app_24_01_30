@@ -22,7 +22,7 @@ const Title = styled.div`
 export const Header = () => {
   return (
     <SHeader>
-      <Title>News Today</Title>
+      <Title>The Daily News</Title>
     </SHeader>
   );
 };
