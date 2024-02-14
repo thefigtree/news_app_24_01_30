@@ -4,28 +4,29 @@ const Navi = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  /* background-color: black; */
+  border: 1px solid gray;
   li {
     display: inline-block;
     margin: 1em;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 0.5em 1em;
-    background-color: #eee;
     color: black;
-    border-radius: 3em;
+    font-weight: 500;
+    /* border-radius: 3em; */
     cursor: pointer;
   }
 `;
 
 export const Menu = ({ active, setActive, setCategory }) => {
   const links = [
-    { id: 0, name: "General", value: "general" },
-    { id: 1, name: "Business", value: "business" },
-    { id: 2, name: "Entertainment", value: "entertainment" },
-    { id: 3, name: "Health", value: "health" },
-    { id: 4, name: "Science", value: "science" },
-    { id: 5, name: "Sports", value: "sports" },
-    { id: 6, name: "Technology", value: "technology" },
+    { id: 0, name: "GENERAL", value: "general" },
+    { id: 1, name: "BUSINESS", value: "business" },
+    { id: 2, name: "ENTERTAINMENT", value: "entertainment" },
+    { id: 3, name: "HEALTH", value: "health" },
+    { id: 4, name: "SCIENCE", value: "science" },
+    { id: 5, name: "SPORTS", value: "sports" },
+    { id: 6, name: "TECHNOLOGY", value: "technology" },
   ];
 
   function onClick(id, value) {

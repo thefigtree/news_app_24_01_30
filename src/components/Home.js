@@ -17,7 +17,11 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    getNews();
+    try {
+      getNews();
+    } catch (error) {
+      console.log("에러" + error);
+    }
   }, [category]);
 
   return (

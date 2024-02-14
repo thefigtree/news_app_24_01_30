@@ -1,10 +1,10 @@
-// import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.section`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  border: 1px solid gray;
 `;
 
 const ConImage = styled.div`
@@ -36,8 +36,8 @@ const Desc = styled.p``;
 const Detail = styled.div``;
 
 export const NewsItem = ({ item }) => {
-  const websiteUrl = item.url;
-  const website = websiteUrl.split("http://").pop().split("/")[0];
+  // const websiteUrl = item.url;
+  // const website = websiteUrl.split("http://").pop().split("/")[0];
   const date = item.publishedAt;
   const formatDate = date.replace("T", " ");
   const formatTime = formatDate.replace("Z", "");
@@ -47,7 +47,6 @@ export const NewsItem = ({ item }) => {
       <ConImage>
         <img src={item.urlToImage} alt={item.title}></img>
       </ConImage>
-
       <Con>
         <Source>
           <span>{item.source.name}</span>
@@ -61,11 +60,6 @@ export const NewsItem = ({ item }) => {
           </small>
         </Detail>
       </Con>
-      {/* <Title>{item.title}</Title>
-      <ConImage>
-        <img src={item.urlToImage} alt={item.title}></img>
-      </ConImage> */}
-      {/* <Link to={`/detail/${item.url}`}></Link> */}
     </Container>
   );
 };
