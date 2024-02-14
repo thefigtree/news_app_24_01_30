@@ -52,12 +52,8 @@ export const NewsItem = ({ item }) => {
         <Source>
           <span>{item.source.name}</span>
         </Source>
-        <Title>
-          <h2>{item.title}</h2>
-        </Title>
-        <Desc>
-          <p>{item.description}</p>
-        </Desc>
+        <Title>{item.title}</Title>
+        <Desc>{item.description}</Desc>
         <Detail>
           <small>
             <b>published At: </b>
