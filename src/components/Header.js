@@ -7,7 +7,7 @@ const SHeader = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid gray;
+  /* border-width: 1px 1px 0 1px solid gray; */
   /* background-color: rebeccapurple; */
 `;
 

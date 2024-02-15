@@ -5,7 +5,8 @@ const Navi = styled.nav`
   justify-content: center;
   align-items: center;
   /* background-color: black; */
-  border: 1px solid gray;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
   li {
     display: inline-block;
     margin: 1em;

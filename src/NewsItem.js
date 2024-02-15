@@ -3,33 +3,41 @@ import styled from "styled-components";
 const Container = styled.section`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 1px solid gray;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 2fr); */
+  /* border: 1px solid gray; */
+  border-bottom: 1px solid gray;
 `;
-
-const ConImage = styled.div`
-  width: 25em;
-  height: 15em;
+const Image = styled.div`
+  /* width: 25em; */
+  /* height: 15em; */
+  /* height: 400px; */
   position: relative;
-  margin-bottom: 0.5em;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    /* width: 100%; */
+    background-repeat: no-repeat;
   }
 `;
 
-const Con = styled.div``;
+const Con = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding-top: 200px; */
+`;
 
 const Source = styled.div``;
 
-const Title = styled.h2``;
+const Title = styled.h2`
+  font-size: 20px;
+  line-height: 22px;
+`;
 
 const Desc = styled.p``;
 
@@ -44,15 +52,13 @@ export const NewsItem = ({ item }) => {
 
   return (
     <Container>
-      <ConImage>
+      <Image>
         <img src={item.urlToImage} alt={item.title}></img>
-      </ConImage>
+      </Image>
       <Con>
-        <Source>
-          <span>{item.source.name}</span>
-        </Source>
         <Title>{item.title}</Title>
         <Desc>{item.description}</Desc>
+        <Source>{item.source.name}</Source>
         <Detail>
           <small>
             <b>published At: </b>
