@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 const Container = styled.section`
+  margin: 0 auto;
+  max-width: 1440px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: repeat(2, 2fr); */
+  grid-template-columns: 50% 50%;
+  /* grid-template-rows: 25% 25% 25% 25%; */
   /* border: 1px solid gray; */
   border-bottom: 1px solid gray;
 `;

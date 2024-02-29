@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Navi = styled.nav`
+  /* max-width: 1000px; */
   display: flex;
   justify-content: center;
   align-items: center;
